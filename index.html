@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title>MONEROMINE.co Wiki</title>
+  <title>Wiki - MONEROMINE.co</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <meta name="description" content="Welcome to MONEROMINEco, A Monero XMR Mining Pool & Public Node!">
-  <meta name="keywords" content="Monero, XMR, Mining, Pool, Node">
+  <meta name="description" content="Welcome to the MONEROMINEco Wiki! An Educational Place For All Things Monero XMR, Pools, and Mining!">
+  <meta name="keywords" content="Monero, XMR, Mining, Pool, Node, Wiki">
   <meta name="author" content="MONEROMINEco">
   <meta name="robots" content="index, follow" />
 
@@ -47,20 +47,23 @@
 
 				<ul class="list-unstyled menu-elements">
 					<li :class="{ 'active': nav === 'about' }">
-						<a class="scroll-link" @click="nav = 'about'">About Moneromine</a>
+						<a class="scroll-link" @click="nav = 'about'">About MONEROMINEco</a>
 					</li>
 					<li :class="{ 'active': nav === 'start' }">
 						<a class="scroll-link" @click="nav = 'start'">Getting Started</a>
 					</li>
-					<li :class="{ 'active': nav === 'advanced' }">
-						<a class="scroll-link" @click="nav = 'advanced'">Advanced Mining</a>
+					<li :class="{ 'active': nav === 'mining' }">
+						<a class="scroll-link" @click="nav = 'mining'">Mining</a>
 					</li>
-          <li :class="{ 'active': nav === 'rules' }">
-            <a class="scroll-link"  @click="nav = 'rules'">Discord</a>
-          </li>
-          <li :class="{ 'active': nav === 'tips' }">
-            <a class="scroll-link"  @click="nav = 'tips'">tip.cc</a>
-          </li>
+					<li :class="{ 'active': nav === 'pool' }">
+						<a class="scroll-link" @click="nav = 'pool'">Our Pool</a>
+					</li>
+					<li :class="{ 'active': nav === 'discord' }">
+						<a class="scroll-link"  @click="nav = 'discord'">Our Discord</a>
+					</li>
+					<li :class="{ 'active': nav === 'monero' }">
+						<a class="scroll-link"  @click="nav = 'monero'">Monero (XMR)</a>
+					</li>
 				</ul>
 			</nav>
 			<!-- End sidebar -->
@@ -80,48 +83,199 @@
               </div>
             </div>
 
-		        <!-- Section 1 -->
+		    <!-- About -->
 		        <section x-show="nav === 'about'" class="section-1-container section-container" id="section-1">
 			        <div class="container">
-			            <h2>Welcome to the Moneromine.co Wiki!</h2>
-                  <p>This wiki will become a repository for information on Moneromine.co, mining in general, and any other information our commmunity finds useful</p>
-                  <p>See the repository README file for information on contributing.</p>
+						<h2>Welcome to the MONEROMINEco Wiki!</h2>
+						<hr>
+						<p>This wiki serves as a repository for information on Monero (XMR), the MONEROMINE.co Pool, Mining, and any other information our commmunity finds useful!</p>
+						<p>See the <a href="https://github.com/techandbeers/moneromine-wiki" target="_blank">repository README</a> file for information on contributing.</p>
+						<hr>
+						<p>MONEROMINEco started as a Monero mining pool at the beginning of February 2021. Since then we have blossomed into an amazing community of kind/helpful members, and are constantly striving to add features that benefit the Monero community at large. Please don't hesitate to provide feedback in our Discord!
+						<hr>
+						<h3>Roadmap</h3>
+						<table style="margin:0 auto;text-align:left;">
+							<tr><th>Area</th><th>Feature</th><th>Delivery Date</th></tr>
+							<tr><td>Frontend</td><td>Top List</td><td>Q3</td></tr>
+							<tr><td>Frontend</td><td>Miner Hashrate Graph Update</td><td>Q2</td></tr>
+							<tr><td>Discord</td><td>MONEROMINEco Bot Message Cleanup</td><td>Q2</td></tr>
+							<tr><td>Wallet</td><td>Web Wallet Service</td><td>Q3</td></tr>
+						</table>
+						<hr>
+						<h3>Leadership Roster</h3>
+						<table style="margin:0 auto;text-align:left;">
+							<tr><th>Name</th><th>Role</th><th>Contact</th></tr>
+							<tr><td>Resin</td><td>Owner/Administrator</td><td></td></tr>
+							<tr><td>Ulysses Patera HOA</td><td>Moderator</td><td></td></tr>
+							<tr><td>Lazrex</td><td>Moderator</td><td></td></tr>
+							<tr><td>bforemanl</td><td>Moderator</td><td></td></tr>
+							<tr><td>comeauxn712</td><td>Moderator/Developer</td><td></td></tr>
+							<tr><td>El'Capitano</td><td>Moderator</td><td></td></tr>
+						</table>
+						<hr>
+						<h3>Wiki Contributors</h3>
+						<table style="margin:0 auto;text-align:left;">
+							<tr><th>Name</th><th>Contact</th></tr>
+							<tr><td></td><td></td></tr>
+						</table>
 			        </div>
 		        </section>
 
-		        <!-- Section 2 -->
+		    <!-- Start -->
 		        <section x-show="nav === 'start'" class="section-2-container section-container" id="section-2">
 			        <div class="container">
-			            <h2>This would be another page</h2>
+			            <h2>Getting Started</h2>
+						<hr>
+						<p>This page will quickly walk users through what is required to start using Monero (XMR), including sending/receiving/mining.</p>
+						<hr>
+						<ol style="margin:0 auto;text-align:left;">
+							<li>Obtain a Monero Wallet. We reccomend the <a href="https://getmonero.org/downloads/" target="_blank">Official Monero Wallet</a> (perhaps using our <a href="https://getmonero.org/resources/user-guides/remote_node_gui.html" target="_blank">remote node</a> for convenience), but a nice list of all options can be found <a href="https://www.monerooutreach.org/stories/monero-wallet-quickstart.html" target="_blank">here</a>.</li>
+							<li>Download the mining software and configure it to connect with our pool. This is outlined on the Mining page of our wiki.</li>
+							<li>View your active miners (rigs) on our <a href="https://moneromine.co/" target="_blank">website</a>, and configure your settings there as well. This is outlined on the Our Pool page of our wiki.</li>
+							<li>Learn more about Monero (XMR), its features, and how it works. This is outlined on the Monero (XMR) page of our wiki.</li>
+						</ol>
 			        </div>
 		        </section>
 
-				<!-- Section 3 -->
-		        <section x-show="nav === 'advanced'" class="section-3-container section-container" id="section-3">
+			<!-- Mining -->
+		        <section x-show="nav === 'mining'" class="section-3-container section-container" id="section-3">
 			        <div class="container">
-                <h2>Yet another page</h2>
+						<h2>MONERO (XMR) Mining Guide</h2>
+						<hr>
+						<p>This page will walk users through the installation and configuration of numerous mining applications.</p>
+						<hr>
+						<p>In order to mine with us, some softare is required. XMR mining is possible with both CPUs and GPUs, however the RandomX algo prevents ASIC miners.</p>
+						<hr>
+						<h3>Mining Software</h3>
+						<ul style="margin:0 auto;text-align:left;">
+							<li><a href="https://github.com/xmrig/xmrig/releases" target="_blank">XMRig</a> for CPU mining, with GPU (<a href="https://github.com/xmrig/xmrig-cuda/releases" target="_blank">Nvidia</a> & <a href="https://github.com/xmrig/xmrig-amd/releases" target="_blank">AMD</a>) plugins</li>
+							<li><a href="https://github.com/fireice-uk/xmr-stak/releases" target="_blank">XMR-Stak</a> for CPU mining</a></li>
+						</ul>
+						<hr>
+						<h3>XMRig Configuration</h3>
+						<h4>Windows</h4>
+						<ol style="margin:0 auto;text-align:left;">
+							<li>Download the latest release from Github and extract the files somewhere (if Windows cries about malware or something, exclude the folder in Windows Defender or your Antivirus Software).</li>
+							<li>With the files extracted, right-click the pool_mine_example file and edit it with notepad.</li>
+							<li>Replace the line in this file that starts with xmrig.exe with the following, being sure to update your Monero wallet address & a name for your Rig.<br />
+							xmrig.exe -o us1.moneromine.co:2222 -u YOUR_WALLET_ADDRESS_HERE --tls -p YOUR_RIG_NAME_HERE<br />
+							<i>TLS in command line or json file enables encrypted mining, but you must be on a TLS port for it to work (our port list on the website lists these). Our pool uses the password field in json (or -p in command line) for your Rig's name, an example being: -p MyAwesomeRig.</i></li>
+							<li>Save and close notepad.</li>
+							<li>Right click the pool_mine_example file and Run As Administrator.</li>
+							<li>Your mining! Your rig should show up on the website once you enter your wallet address (after a minute or two)!</li>
+						</ol>
+						<h4>Linux</h4>
+						<ol style="margin:0 auto;text-align:left;">
+							<li>Coming soon...</li>
+						</ol>
+						<hr>
+						<h3>XMR-Stak Configuration</h3>
+						<h4>Windows</h4>
+						<ol style="margin:0 auto;text-align:left;">
+							<li>Coming soon...</li>
+						</ol>
+						<h4>Linux</h4>
+						<ol style="margin:0 auto;text-align:left;">
+							<li>Coming soon...</li>
+						</ol>
 			        </div>
 		        </section>
-
-				<!-- Section 4 -->
-		        <section  x-show="nav === 'rules'" class="section-4-container section-container" id="section-4">
+				
+			<!-- Pool -->
+		        <section x-show="nav === 'pool'" class="section-4-container section-container" id="section-4">
 			        <div class="container">
-                <h2>Woah more pages!</h2>
+						<h2>MONEROMINEco Pool Guide</h2>
+						<hr>
+						<p>This page will walk users through our pool's features and answer questions around how our pool works.</p>
+						<hr>
+						<p>Our Pool uses PPLNS, which provides fair rewards (shares) for miners and combats pool hopping. We also offer Solo mining ports for those with farm-grade hardware, these miners get %100 of the block reward if/when they find a block. Please note that while we have no pool fee, there is a small TX fee which can be seen under the "Update Threshold" button when configuring your auto-payout amount.</p>
+						<hr>
+						<h3>Pool Features</h3>
+						<ul style="margin:0 auto;text-align:left;">
+							<li>0% Pool Fee</li>
+							<li>Hashrate Capping (25% of global)</li>
+							<li>0.003 Minimum Payout</li>
+							<li>Block Notify</li>
+							<li>Email Notifications</li>
+							<li>DDoS Protection</li>
+						</ul>
+						<hr>
+						<h3>Pool Configuration</h3>
+						<h4>Auto-Pay Threshold</h4>
+						<p>Changing this number and clicking the "Update Threshhold" button will set when the pool pays you out (Default: 0.3, Minimum: 0.003). Folks who accumulate over 4.0 XMR will not pay the TX fee.</p>
+						<h4>Email Notifications</h4>
+						<p>When adding email for the first time: Simply put your email address in the text field labeled "Change Email To (or initial email)" and click the "Email Alerts" Button.</p>
+						<p>When changing/updating your email: Simply add your current email address to the text field labeled "Change Email From (current email)", put your new email address in the text field labeled "Change Email To (or initial email)", and click the "Email Alerts" Button.</p>
 			        </div>
 		        </section>
 
-		        <!-- Section 5 -->
-		        <section x-show="nav === 'tips'" class="section-5-container section-container" id="section-5">
+			<!-- Discord -->
+		        <section  x-show="nav === 'discord'" class="section-5-container section-container" id="section-5">
 			        <div class="container">
-                <h2>Dang 5 whole pages.</h2>
+						<h2>MONEROMINEco Discord Guide</h2>
+						<hr>
+						<p>This page will walk users through our Discord's rules and features.</p>
+						<hr>
+						<p><a href="https://discord.gg/ZypfV3kkb6" target="_blank">Our Discord server</a> is the heart of our community, and offers a few pretty cool features in the form of bots. Bots can be triggered by typing the commands below in one of our Discord channels, or in a direct message to the bot.</p>
+						<hr>
+						<h3>Discord Rules</h3>
+						<ul style="margin:0 auto;text-align:left;">
+							<li>No hate speech. None.</li>
+							<li>No politics.</li>
+							<li>No begging. We're here to help everyone mine, but do not expect free XMR or Hash.</li>
+							<li>No coordination of pump and dumps, there are plenty of other Discord servers for that.</li>
+							<li>No pornography. I shouldn't have to say this but I am.</li>
+							<li>Just, yuh know, don't be a dick.</li>
+						</ul>
+						<hr>
+						<h3>MONEROMINEco Bot</h3>
+						<p>At the moment, our <a href="https://github.com/techandbeers/pool-discord-bot" target="_blank">open-source bot</a> only alerts the Discord when our pool finds a block. We will be adding to it over time.</p>
+						<hr>
+						<h3>Tip.cc Bot</h3>
+						<p>The <a href="https://tip.cc/" target="_blank">Tip.cc bot</a> allows our community to send and receive Monero (XMR) quickly and easily through commands within our Discord Server.</p>
+						<h4>Commands</h4>
+						<ul style="margin:0 auto;text-align:left;">
+							<li>$help</li>
+							<li>$balance monero</li>
+							<li>$withdraw</li>
+							<li>$deposit</li>
+						</ul>
+						<hr>
+						<h3>Mee6 Bot</h3>
+						<p>The <a href="https://mee6.xyz/" target="_blank">Mee6 bot</a> currently greets new members, provides a server rank, and supports custom commands.</p>
+						<h4>Commands</h4>
+						<ul style="margin:0 auto;text-align:left;">
+							<li>!help</li>
+							<li>!rank</li>
+							<li>!hello</li>
+							<li>!start</li>
+						</ul>
 			        </div>
 		        </section>
 
-		        <!-- Footer -->
+		    <!-- Monero -->
+		        <section x-show="nav === 'monero'" class="section-6-container section-container" id="section-6">
+			        <div class="container">
+						<h2>Monero (XMR) Guide & Resources</h2>
+						<hr>
+						<p>This page will outline Monero (XMR) and its components.</p>
+						<hr>
+						<p><a href="https://en.wikipedia.org/wiki/Monero" target="_blank">Monero (XMR)</a> is <a href="https://en.wikipedia.org/wiki/Fungibility" target="_blank">fungible</a>, privacy-focused crytpocurrency that utilizes <a href="https://en.wikipedia.org/wiki/Proof_of_work" target="_blank">Proof of Work</a> via the <a href="https://github.com/tevador/RandomX" target="_blank">RandomX Algo</a> to validate transactions on the blockchain and distribute <a href="https://coinmarketcap.com/currencies/monero/" target="_blank">coins</a>.
+						<hr>
+						<h3>Resources</h3>
+						<ul style="margin:0 auto;text-align:left;">
+						<li><a href="https://www.getmonero.org/" target="_blank">Official Monero Website</a></li>
+						<li><a href="https://www.getmonero.org/downloads/" target="_blank">Official Monero Downloads</a></li>
+						<li><a href="https://github.com/tevador/RandomX" target="_blank">RandomX</a></li>
+						</ul>
+			        </div>
+		        </section>
+
+		    <!-- Footer -->
 		        <footer class="footer-container">
               <div class="inner">
                 <ul class="copyright">
-                  <li>&copy;<span>2021</span> MONEROMINEco. <a href="https://github.com/techandbeers" target="_blank" style="border-bottom: none;" title="View our Github Repo"><i class="fab fa-github"></i></a> All rights reserved.</li>
+                  <li>&copy;<span>2021</span> MONEROMINEco <a href="https://github.com/techandbeers" target="_blank" style="border-bottom: none;" title="View our Github Repo"><i class="fab fa-github"></i></a> All rights reserved.</li>
                 </ul>
               </div>
 		        </footer>

@@ -1,6 +1,9 @@
 # moneromine-wiki
 A Wiki covering all things Monero, Pools, &amp; Mining
 
+##Contributing
+Please always work from and submit pull requests to the Dev branch!
+
 ## Project Overview
 This project is scaffolded using a combination of Bootstrap, JQuery, and Alpine.js.
 
