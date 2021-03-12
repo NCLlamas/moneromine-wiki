@@ -10,7 +10,8 @@ This project is scaffolded using a combination of Bootstrap, JQuery, and Alpine.
 
 ## Adding pages to the Wiki
 Each page needs two things to be fully supported:
-###1. A menu entry on the sidebar, following the model:
+
+### 1. A menu entry on the sidebar, following the model:
    
     <li :class="{ 'active': nav === 'section-id' }">
     <a class="scroll-link"  @click="nav = 'section-id'">New Page</a>
@@ -18,7 +19,7 @@ Each page needs two things to be fully supported:
 
 where section-id is a unique identifier used by alpine.js to determine visibility with navigation.
 
-###2. A section (aka page) following the model:
+### 2. A section (aka page) following the model:
 
     <section x-show="nav === 'section-id'" class="section-1-container section-container" id="section-1">
         <div class="container">
@@ -28,7 +29,7 @@ where section-id is a unique identifier used by alpine.js to determine visibilit
 
 where the x-show value matches your unique identifier.
 
-##Roadmap for future Improvements
+## Roadmap for future Improvements
 There are a number of improvements that could happen once the content is solidified.
  - Eliminate unused JS remaining from the project this was sourced from
  - Add header links to the Discord, Twitter, Email, and Status
