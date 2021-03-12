@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>MONEROMINE.co Wiki</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="description" content="Welcome to MONEROMINEco, A Monero XMR Mining Pool & Public Node!">
+  <meta name="keywords" content="Monero, XMR, Mining, Pool, Node">
+  <meta name="author" content="MONEROMINEco">
+  <meta name="robots" content="index, follow" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="./assets/icons/site.webmanifest">
+  <link rel="mask-icon" href="./assets/icons/safari-pinned-tab.svg" color="#603cba">
+  <meta name="msapplication-TileColor" content="#603cba">
+  <meta name="theme-color" content="#ffffff">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Bootstrap CSS to quickly make things pretty -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/media-queries.css">
+
+</head>
+
+<body>
+		<!-- Wrapper -->
+    <div x-data="{nav:'about'}" class="wrapper">
+
+			<!-- Sidebar -->
+			<nav class="sidebar">
+
+				<!-- close sidebar menu -->
+				<div class="dismiss">
+					<i class="fas fa-arrow-left"></i>
+				</div>
+
+				<div class="logo">
+					<i class="fas fa-meteor fa-3x"></i>
+				</div>
+
+				<ul class="list-unstyled menu-elements">
+					<li :class="{ 'active': nav === 'about' }">
+						<a class="scroll-link" @click="nav = 'about'">About Moneromine</a>
+					</li>
+					<li :class="{ 'active': nav === 'start' }">
+						<a class="scroll-link" @click="nav = 'start'">Getting Started</a>
+					</li>
+					<li :class="{ 'active': nav === 'advanced' }">
+						<a class="scroll-link" @click="nav = 'advanced'">Advanced Mining</a>
+					</li>
+          <li :class="{ 'active': nav === 'rules' }">
+            <a class="scroll-link"  @click="nav = 'rules'">Discord</a>
+          </li>
+          <li :class="{ 'active': nav === 'tips' }">
+            <a class="scroll-link"  @click="nav = 'tips'">tip.cc</a>
+          </li>
+				</ul>
+			</nav>
+			<!-- End sidebar -->
+
+			<!-- Content -->
+			<div class="content">
+
+          <!-- Top navbar -->
+
+            <div class="navbar">
+              <div class="container-fluid">
+
+                <!-- open sidebar menu -->
+                <a class="btn btn-primary btn-customized open-menu" role="button">
+                  <i class="fas fa-align-left"></i> <span>Menu</span>
+                </a>
+              </div>
+            </div>
+
+		        <!-- Section 1 -->
+		        <section x-show="nav === 'about'" class="section-1-container section-container" id="section-1">
+			        <div class="container">
+			            <h2>Welcome to the Moneromine.co Wiki!</h2>
+                  <p>This wiki will become a repository for information on Moneromine.co, mining in general, and any other information our commmunity finds useful</p>
+                  <p>See the repository README file for information on contributing.</p>
+			        </div>
+		        </section>
+
+		        <!-- Section 2 -->
+		        <section x-show="nav === 'start'" class="section-2-container section-container" id="section-2">
+			        <div class="container">
+			            <h2>This would be another page</h2>
+			        </div>
+		        </section>
+
+				<!-- Section 3 -->
+		        <section x-show="nav === 'advanced'" class="section-3-container section-container" id="section-3">
+			        <div class="container">
+                <h2>Yet another page</h2>
+			        </div>
+		        </section>
+
+				<!-- Section 4 -->
+		        <section  x-show="nav === 'rules'" class="section-4-container section-container" id="section-4">
+			        <div class="container">
+                <h2>Woah more pages!</h2>
+			        </div>
+		        </section>
+
+		        <!-- Section 5 -->
+		        <section x-show="nav === 'tips'" class="section-5-container section-container" id="section-5">
+			        <div class="container">
+                <h2>Dang 5 whole pages.</h2>
+			        </div>
+		        </section>
+
+		        <!-- Footer -->
+		        <footer class="footer-container">
+              <div class="inner">
+                <ul class="copyright">
+                  <li>&copy;<span>2021</span> MONEROMINEco. <a href="https://github.com/techandbeers" target="_blank" style="border-bottom: none;" title="View our Github Repo"><i class="fab fa-github"></i></a> All rights reserved.</li>
+                </ul>
+              </div>
+		        </footer>
+
+	        </div>
+	        <!-- End content -->
+
+        </div>
+        <!-- End wrapper -->
+
+        <!-- ALPINE.JS SCRIPTS -->
+        <script src="https://cdn.jsdelivr.net/gh/alpine-collective/alpine-magic-helpers@0.6.x/dist/component.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
+        <!-- BOOTSTRAP SCRIPTS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>        <script src="assets/js/jquery-3.3.1.min.js"></script>
+        <script src="assets/js/jquery-migrate-3.0.0.min.js"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/jquery.waypoints.min.js"></script>
+        <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
+</body>
+</html>
