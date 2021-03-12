@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="assets/css/animate.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/media-queries.css">
-  
+
 </head>
 
 <body>
@@ -35,16 +35,16 @@
 
 			<!-- Sidebar -->
 			<nav class="sidebar">
-				
+
 				<!-- close sidebar menu -->
 				<div class="dismiss">
 					<i class="fas fa-arrow-left"></i>
 				</div>
-				
+
 				<div class="logo">
 					<i class="fas fa-meteor fa-3x"></i>
 				</div>
-				
+
 				<ul class="list-unstyled menu-elements">
 					<li :class="{ 'active': nav === 'about' }">
 						<a class="scroll-link" @click="nav = 'about'">About Moneromine</a>
@@ -67,7 +67,7 @@
 
 			<!-- Content -->
 			<div class="content">
-			
+
           <!-- Top navbar -->
 
             <div class="navbar">
@@ -79,44 +79,44 @@
                 </a>
               </div>
             </div>
-			
+
 		        <!-- Section 1 -->
-		        <div x-show="nav === 'about'" class="section-1-container section-container" id="section-1">
+		        <section x-show="nav === 'about'" class="section-1-container section-container" id="section-1">
 			        <div class="container">
 			            <h2>Welcome to the Moneromine.co Wiki!</h2>
                   <p>This wiki will become a repository for information on Moneromine.co, mining in general, and any other information our commmunity finds useful</p>
                   <p>See the repository README file for information on contributing.</p>
 			        </div>
-		        </div>
-		
+		        </section>
+
 		        <!-- Section 2 -->
-		        <div x-show="nav === 'start'" class="section-2-container section-container" id="section-2">
+		        <section x-show="nav === 'start'" class="section-2-container section-container" id="section-2">
 			        <div class="container">
 			            <h2>This would be another page</h2>
 			        </div>
-		        </div>
-		
+		        </section>
+
 				<!-- Section 3 -->
-		        <div x-show="nav === 'advanced'" class="section-3-container section-container" id="section-3">
+		        <section x-show="nav === 'advanced'" class="section-3-container section-container" id="section-3">
 			        <div class="container">
                 <h2>Yet another page</h2>
 			        </div>
-		        </div>
-		
+		        </section>
+
 				<!-- Section 4 -->
-		        <div  x-show="nav === 'rules'" class="section-4-container section-container" id="section-4">
+		        <section  x-show="nav === 'rules'" class="section-4-container section-container" id="section-4">
 			        <div class="container">
                 <h2>Woah more pages!</h2>
 			        </div>
-		        </div>
-		        
+		        </section>
+
 		        <!-- Section 5 -->
-		        <div x-show="nav === 'tips'" class="section-5-container section-container" id="section-5">
+		        <section x-show="nav === 'tips'" class="section-5-container section-container" id="section-5">
 			        <div class="container">
                 <h2>Dang 5 whole pages.</h2>
 			        </div>
-		        </div>
-		
+		        </section>
+
 		        <!-- Footer -->
 		        <footer class="footer-container">
               <div class="inner">
@@ -125,10 +125,10 @@
                 </ul>
               </div>
 		        </footer>
-	        
+
 	        </div>
 	        <!-- End content -->
-        
+
         </div>
         <!-- End wrapper -->
 
