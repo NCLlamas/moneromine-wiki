@@ -22,10 +22,13 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
   <link rel="stylesheet" href="assets/css/animate.css">
-  <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/media-queries.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+	<!-- ALPINE.JS scripts to make things work -->
+	<script src="https://cdn.jsdelivr.net/gh/alpine-collective/alpine-magic-helpers@0.6.x/dist/component.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
 
 </head>
 
@@ -37,7 +40,7 @@
 			<nav class="sidebar">
 
 				<!-- close sidebar menu -->
-				<div class="dismiss">
+				<div class="dismiss" @click="showMenu(false)">
 					<i class="fas fa-arrow-left"></i>
 				</div>
 
@@ -77,14 +80,24 @@
               <div class="container-fluid">
 
                 <!-- open sidebar menu -->
-                <a class="btn btn-primary btn-customized open-menu" role="button">
+                <a class="btn btn-primary btn-customized open-menu" role="button" @click="showMenu(true)">
                   <i class="fas fa-align-left"></i> <span>Menu</span>
                 </a>
               </div>
             </div>
 
 		    <!-- About -->
-		        <section x-show="nav === 'about'" class="section-1-container section-container" id="section-1">
+		        <section 
+							class="section-1-container section-container" 
+							id="section-1"
+							x-show.transition="nav === 'about'"
+							x-transition:enter="transition ease-out duration-300"
+							x-transition:enter-start="opacity-0"
+							x-transition:enter-end="opacity-100"
+							x-transition:leave="transition ease-in duration-300"
+							x-transition:leave-start="opacity-100"
+							x-transition:leave-end="opacity-0"
+						>
 			        <div class="container">
 						<h2>Welcome to the MONEROMINEco Wiki!</h2>
 						<hr>
@@ -122,7 +135,13 @@
 		        </section>
 
 		    <!-- Start -->
-		        <section x-show="nav === 'start'" class="section-2-container section-container" id="section-2">
+		        <section x-show.transition="nav === 'start'" class="section-2-container section-container" id="section-2"
+						x-transition:enter="transition ease-out duration-300"
+						x-transition:enter-start="opacity-0"
+						x-transition:enter-end="opacity-100"
+						x-transition:leave="transition ease-in duration-300"
+						x-transition:leave-start="opacity-100"
+						x-transition:leave-end="opacity-0">
 			        <div class="container">
 			            <h2>Getting Started</h2>
 						<hr>
@@ -138,7 +157,13 @@
 		        </section>
 
 			<!-- Mining -->
-		        <section x-show="nav === 'mining'" class="section-3-container section-container" id="section-3">
+		        <section x-show.transition="nav === 'mining'" class="section-3-container section-container" id="section-3"
+						x-transition:enter="transition ease-out duration-300"
+						x-transition:enter-start="opacity-0"
+						x-transition:enter-end="opacity-100"
+						x-transition:leave="transition ease-in duration-300"
+						x-transition:leave-start="opacity-100"
+						x-transition:leave-end="opacity-0">
 			        <div class="container">
 						<h2>MONERO (XMR) Mining Guide</h2>
 						<hr>
@@ -182,7 +207,13 @@
 		        </section>
 				
 			<!-- Pool -->
-		        <section x-show="nav === 'pool'" class="section-4-container section-container" id="section-4">
+		        <section x-show.transition="nav === 'pool'" class="section-4-container section-container" id="section-4"
+						x-transition:enter="transition ease-out duration-300"
+						x-transition:enter-start="opacity-0"
+						x-transition:enter-end="opacity-100"
+						x-transition:leave="transition ease-in duration-300"
+						x-transition:leave-start="opacity-100"
+						x-transition:leave-end="opacity-0">
 			        <div class="container">
 						<h2>MONEROMINEco Pool Guide</h2>
 						<hr>
@@ -210,7 +241,13 @@
 		        </section>
 
 			<!-- Discord -->
-		        <section  x-show="nav === 'discord'" class="section-5-container section-container" id="section-5">
+		        <section  x-show.transition="nav === 'discord'" class="section-5-container section-container" id="section-5"
+						x-transition:enter="transition ease-out duration-300"
+						x-transition:enter-start="opacity-0"
+						x-transition:enter-end="opacity-100"
+						x-transition:leave="transition ease-in duration-300"
+						x-transition:leave-start="opacity-100"
+						x-transition:leave-end="opacity-0">
 			        <div class="container">
 						<h2>MONEROMINEco Discord Guide</h2>
 						<hr>
@@ -254,7 +291,13 @@
 		        </section>
 
 		    <!-- Monero -->
-		        <section x-show="nav === 'monero'" class="section-6-container section-container" id="section-6">
+		        <section x-show.transition="nav === 'monero'" class="section-6-container section-container" id="section-6"
+						x-transition:enter="transition ease-out duration-300"
+						x-transition:enter-start="opacity-0"
+						x-transition:enter-end="opacity-100"
+						x-transition:leave="transition ease-in duration-300"
+						x-transition:leave-start="opacity-100"
+						x-transition:leave-end="opacity-0".transition>
 			        <div class="container">
 						<h2>Monero (XMR) Guide & Resources</h2>
 						<hr>
@@ -286,17 +329,11 @@
         </div>
         <!-- End wrapper -->
 
-        <!-- ALPINE.JS SCRIPTS -->
-        <script src="https://cdn.jsdelivr.net/gh/alpine-collective/alpine-magic-helpers@0.6.x/dist/component.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
+				<!-- ALPINE.JS SCRIPTS -->
+				<script src="./assets/js/scripts.js"></script>
+
         <!-- BOOTSTRAP SCRIPTS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>        <script src="assets/js/jquery-3.3.1.min.js"></script>
-        <script src="assets/js/jquery-migrate-3.0.0.min.js"></script>
-        <script src="assets/js/jquery.backstretch.min.js"></script>
-        <script src="assets/js/wow.min.js"></script>
-        <script src="assets/js/jquery.waypoints.min.js"></script>
-        <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
-        <script src="assets/js/scripts.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>        
 </body>
 </html>
